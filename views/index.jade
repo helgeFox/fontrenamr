@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  // p Welcome to #{title}
+  form(action='/upload', method='post', enctype='multipart/form-data')
+    p
+      label(for='fonts') Velg font-filer
+      br
+      input(type='file', id='fonts', name='fonts', multiple)
+    p
+      label(for='nyttnavn') Nytt FontName
+      br
+      input(name='nyttnavn', id='nyttnavn')
+    button(type='submit') Last opp
